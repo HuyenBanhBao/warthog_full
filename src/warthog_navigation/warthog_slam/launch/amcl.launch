@@ -6,8 +6,10 @@
     <arg name="initial_pose_x" default="0.0"/>
     <arg name="initial_pose_y" default="0.0"/>
     <arg name="initial_pose_a" default="0.0"/>
+
     <!-- Run the map server -->
     <arg name="map_file" default="$(find warthog_slam)/maps/warthog_map_1.yaml"/>
+    <!-- publish /map -->
     <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
   
     <!-- AMCL -->
